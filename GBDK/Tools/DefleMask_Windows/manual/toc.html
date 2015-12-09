@@ -1,0 +1,400 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+
+<head>
+	<title>DefleMask Manual- Table of Contents</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+    <meta name="generator" content="HelpNDoc">
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/silver-theme/jquery-ui-1.8.12.custom.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+    <link type="text/css" rel="stylesheet" media="all" href="css/toc.css" />
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="js/jquery.treeview.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.8.12.custom.min.js"></script>
+	<script type="text/javascript" src="js/hndjsse.js"></script>
+	<script type="text/javascript">
+	
+		var bSearchDataLoaded = false;
+	
+		$(document).ready(function()
+		{
+			$("#tabs").tabs({selected: 0});
+			$("#toc").treeview({collapsed: true});
+			$("#keywords").treeview({collapsed: true});
+			// Load search data
+			$.getScript("js/searchdata.js",	function() {
+				bSearchDataLoaded = true;
+			});
+		});
+		
+		function SelectTocItem(sLinkHref)
+		{
+			$("#toc a").each(function()
+			{
+				if ($.inArray(sLinkHref + '.htm', this.href) > -1) $(this).css('font-weight', 'bold')
+				else $(this).css('font-weight', '');
+			});
+		}
+		
+		function HideKwPopup()
+		{
+			if($("#popupMenu")) $("#popupMenu").remove();
+		}
+		
+		function ShowKwPopup(oSender, aLinks)
+		{
+			HideKwPopup();
+			if (!aLinks || !aLinks.length || aLinks.length == 0) return false
+			else if (aLinks.length == 1) return true
+			else
+			{
+				var oParentDiv = document.createElement("DIV");
+				oParentDiv.id = "popupMenu";
+				var oLink = null;
+				for (var nCnt=0; nCnt<aLinks.length; nCnt++)
+				{
+					oLink = document.createElement("A");
+					oLink.innerHTML = aLinks[nCnt][0];
+					oLink.href = aLinks[nCnt][1];
+					oLink.target = "FrameMain";
+					oLink.onclick = HideKwPopup;
+					oParentDiv.appendChild(oLink);
+				}
+				document.body.appendChild(oParentDiv);
+				var pos = $(oSender).offset(); 
+				var height = $(oSender).height();
+				$(oParentDiv).css({
+					"left": (pos.left+20) + "px",
+					"top": (pos.top + height + 5) + "px"
+				});
+				$(oParentDiv).show();
+				return false;
+			}
+		}
+		
+		function PerformSearch()
+		{
+			sValue = $("#search_value").val();
+			$("#search_results").html('Searching...');
+			var oSearchEngine = new HndJsSe;
+			oSearchEngine.ParseInput(sValue);			
+			oSearchEngine.PerformSearch();
+			if (!oSearchEngine.aResults || !oSearchEngine.aResults.length)
+			{
+				$("#search_results").html('No results found.');
+			}
+			else
+			{
+				$("#search_results").html('');
+				var oUl = $("#search_results").append("<ul id='lr'></ul>").find("ul");
+				for (var nCnt = 0; nCnt < oSearchEngine.aResults.length; nCnt++)
+				{
+					oUl.append("<li><a href='" + aTl[oSearchEngine.aResults[nCnt]][0] + "?search=" + escape(sValue) + "' target='FrameMain'>" + unescape(aTl[oSearchEngine.aResults[nCnt]][1]) + "</a></li>");
+				}
+				$("#lr").treeview({collapsed: false});
+			}
+		}
+	</script>
+</head>
+
+<body>
+
+	<div id="tabs">
+		<ul>
+			<li><a href="#tab-toc">DefleMask Manual</a></li>
+		</ul>
+		<div id="tab-toc">
+			<ul id="toc" class="filetree toctree">
+
+				<li>
+							<a
+							href="DefleMaskMain.html"
+							class="folder"
+							target="FrameMain">
+								DefleMask Main</a>
+
+				<ul><li>
+							<a
+							href="MainScreen.html"
+							class="file"
+							target="FrameMain">
+								Main Screen</a>
+
+				</li><li>
+							<a
+							href="Controls.html"
+							class="file"
+							target="FrameMain">
+								Controls</a>
+
+				</li><li>
+							<a
+							href="LiveMode.html"
+							class="file"
+							target="FrameMain">
+								The Live Mode</a>
+
+				</li><li>
+							<a
+							href="StandardEffects.html"
+							class="file"
+							target="FrameMain">
+								Standard Effects</a>
+
+				</li><li>
+							<a
+							href="Skins.html"
+							class="file"
+							target="FrameMain">
+								Skins</a>
+
+				</li><li>
+							<a
+							href="Configini.html"
+							class="file"
+							target="FrameMain">
+								Config.ini</a>
+
+				</li><li>
+							<a
+							href="FAQ.html"
+							class="file"
+							target="FrameMain">
+								FAQ</a>
+
+				</li><li>
+							<a
+							href="DeleksLinks.html"
+							class="file"
+							target="FrameMain">
+								Delek's Links</a>
+
+				</li></ul></li><li>
+							<a
+							href="SystemYAMAHAYMU759.html"
+							class="folder"
+							target="FrameMain">
+								System: YAMAHA YMU759</a>
+
+				<ul><li>
+							<a
+							href="Behavior.html"
+							class="file"
+							target="FrameMain">
+								Behavior</a>
+
+				</li><li>
+							<a
+							href="InstrumentEditor.html"
+							class="file"
+							target="FrameMain">
+								Instrument Editor</a>
+
+				</li><li>
+							<a
+							href="EffectsAdded.html"
+							class="file"
+							target="FrameMain">
+								Effects Added</a>
+
+				</li><li>
+							<a
+							href="CompatibleHardwareList.html"
+							class="file"
+							target="FrameMain">
+								Compatible Hardware List</a>
+
+				</li><li>
+							<a
+							href="FAQ1.html"
+							class="file"
+							target="FrameMain">
+								FAQ</a>
+
+				</li></ul></li><li>
+							<a
+							href="SystemSEGAGenesis.html"
+							class="folder"
+							target="FrameMain">
+								System: SEGA Genesis</a>
+
+				<ul><li>
+							<a
+							href="InstrumentEditor1.html"
+							class="file"
+							target="FrameMain">
+								Instrument Editor</a>
+
+				</li><li>
+							<a
+							href="EffectsAdded1.html"
+							class="file"
+							target="FrameMain">
+								Effects Added</a>
+
+				</li><li>
+							<a
+							href="FAQ2.html"
+							class="file"
+							target="FrameMain">
+								FAQ</a>
+
+				</li></ul></li><li>
+							<a
+							href="SystemSEGAMasterSystem.html"
+							class="folder"
+							target="FrameMain">
+								System: SEGA Master System</a>
+
+				<ul><li>
+							<a
+							href="InstrumentEditor2.html"
+							class="file"
+							target="FrameMain">
+								Instrument Editor</a>
+
+				</li><li>
+							<a
+							href="EffectsAdded2.html"
+							class="file"
+							target="FrameMain">
+								Effects Added</a>
+
+				</li><li>
+							<a
+							href="FAQ3.html"
+							class="file"
+							target="FrameMain">
+								FAQ</a>
+				
+				</li></ul></li><li>
+							<a
+							href="SystemGameBoy.html"
+							class="folder"
+							target="FrameMain">
+								System: Nintendo Game Boy</a>
+
+				<ul><li>
+							<a
+							href="InstrumentEditor3.html"
+							class="file"
+							target="FrameMain">
+								Instrument Editor</a>
+
+				</li><li>
+							<a
+							href="EffectsAdded3.html"
+							class="file"
+							target="FrameMain">
+								Effects Added</a>
+
+				</li><li>
+							<a
+							href="FAQ4.html"
+							class="file"
+							target="FrameMain">
+								FAQ</a>
+
+				</li></ul></li><li>
+							<a
+							href="SystemPCEngine.html"
+							class="folder"
+							target="FrameMain">
+								System: NEC PC-Engine</a>
+
+				<ul><li>
+							<a
+							href="InstrumentEditor4.html"
+							class="file"
+							target="FrameMain">
+								Instrument Editor</a>
+
+				</li><li>
+							<a
+							href="EffectsAdded4.html"
+							class="file"
+							target="FrameMain">
+								Effects Added</a>
+
+				</li><li>
+							<a
+							href="FAQ5.html"
+							class="file"
+							target="FrameMain">
+								FAQ</a>
+
+				</li></ul></li><li>
+							<a
+							href="SystemNES.html"
+							class="folder"
+							target="FrameMain">
+								System: Nintendo NES</a>
+
+				<ul><li>
+							<a
+							href="InstrumentEditor5.html"
+							class="file"
+							target="FrameMain">
+								Instrument Editor</a>
+
+				</li><li>
+							<a
+							href="EffectsAdded5.html"
+							class="file"
+							target="FrameMain">
+								Effects Added</a>
+
+				</li><li>
+							<a
+							href="FAQ6.html"
+							class="file"
+							target="FrameMain">
+								FAQ</a>
+
+				</li></ul></li>
+			<li>
+							<a
+							href="SystemC64.html"
+							class="folder"
+							target="FrameMain">
+								System: Commodore 64</a>
+
+				<ul><li>
+							<a
+							href="InstrumentEditor6.html"
+							class="file"
+							target="FrameMain">
+								Instrument Editor</a>
+
+				</li><li>
+							<a
+							href="EffectsAdded6.html"
+							class="file"
+							target="FrameMain">
+								Effects Added</a>
+
+				</li><li>
+							<a
+							href="FAQ7.html"
+							class="file"
+							target="FrameMain">
+								FAQ</a>
+
+				</li></ul></li>
+
+				</ul>
+		</div>
+		<div id="tab-keywords">
+			<ul id="keywords" class="filetree indextree">
+
+				</ul>
+		</div>
+	</div>
+    
+</body>
+
+</html>
+

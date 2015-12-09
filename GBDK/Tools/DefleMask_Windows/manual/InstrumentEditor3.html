@@ -1,0 +1,65 @@
+﻿<html>
+	
+<head>
+	<title>Instrument Editor</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+    <meta name="generator" content="HelpNDoc">
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript"><!--
+		var sTopicId = "InstrumentEditor2";
+		if (top.frames.length == 0)
+			top.location.href = "Manual.html?" + sTopicId
+		else if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+			top.FrameTOC.SelectTocItem(sTopicId);
+	</script>
+</head>
+
+<body>
+
+	<div id="topic_header">
+			<div id="topic_header_content">
+				<h1>Instrument Editor</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="SystemGameBoy.html">System: Nintendo Game Boy</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="SystemGameBoy.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="Behavior3.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="EffectsAdded3.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p class="rvps3"><span class="rvts15">GAME BOY SYSTEM INSTRUMENTS EDITOR MENU:</span><br><span class="rvts25">
+<br>
+<p class="rvps3"><span class="rvts25"></span><br><img border="0" width="614" height="460" alt hspace="1" vspace="1" src="lib/GB_InstrumentEditor.png"><br><span class="rvts25"><br></span></p>
+<br>
+You can control the volume of every channel in the Game Boy by using the envelope generator; this generator needs 2 values: Start point, and duration. It will decay or increase the volume at a constant rate starting from that start point. You can set the volume to decay or to increase by changing Down/Up parameter.<br>
+You have also the Sound Size parameter to make very short sounds, useful for noise and drum making. The point where the sounds gets muted is displayed as a vertical bar.
+<br>The WAVE Channel, however, don't have a envelope generator. Also, it range is limited, only independent values can be assigned, from 0..3, 4..7, 8..B and B..F. Set it on the volume column and use volume slide effects.
+<br>In order to change dinamically the tones rapidly, you have an Arpeggio Envelope, a Duty Cycle Envelope to change the feeling of the square waves rapidly and a WaveForm Envelope to switch between waves dinamically.
+<br>
+<p class="rvps3"><span class="rvts25"></span><br><img border="0" width="614" height="460" alt hspace="1" vspace="1" src="lib/GB_WAVE_InstrumentEditor.png"><br><span class="rvts25"><br></span></p>
+<br>
+And in order to define the shape of the WAVE channel you have to use the WAVE Editor. You can use more than 1 WAVEFORM, and in order to switch between WAVES you could use the "Selected WAVE" display in the top part of the window, you can also change the selected wave in the instrument list, you have to use the 10xx effect to switch them while a song is playing. Or, as described before, using the WAVEFORM Macro.<br>
+</span><br>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; by Delek. All Rights Reserved.</div>
+		</div>
+	</body>
+	
+</html>
+

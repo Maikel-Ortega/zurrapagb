@@ -1,0 +1,83 @@
+<html>
+	
+<head>
+	<title>Instrument Editor</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+    <meta name="generator" content="HelpNDoc">
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript"><!--
+		var sTopicId = "InstrumentEditor1";
+		if (top.frames.length == 0)
+			top.location.href = "Manual.html?" + sTopicId
+		else if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+			top.FrameTOC.SelectTocItem(sTopicId);
+	</script>
+</head>
+
+<body>
+
+	<div id="topic_header">
+			<div id="topic_header_content">
+				<h1>Instrument Editor</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="SystemSEGAGenesis.html">System: SEGA Genesis</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="SystemSEGAGenesis.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="Behavior1.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="EffectsAdded1.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p class="rvps3"><span class="rvts15">SEGA GENESIS INSTRUMENTS EDITOR MENU:</span><br><span class="rvts15"><br></span></p>
+<br>In the YM2612 editor, you can load presets in many formats:<br>
+<br>.dmp (Official DefleMask Preset File)
+<br>.bin (RAW SMPS dump)
+<br>.tfi (TFM Music Maker format)
+<br>.y12 (GENS KMod dump)
+<br>.ins (MVS Tracker format)
+<br>.vgi (VGM Music Maker format).
+<br><br>
+<p class="rvps3"><img border="0" width="614" height="460" alt hspace="1" vspace="1" src="lib/Genesis_InstrumentEditor.PNG"></p>
+<p class="rvps3"><span class="rvts26"></span><br><span class="rvts92">Global Values:</span></p>
+<p class="rvps3"><span class="rvts92"></span><br><span class="rvts26">FMS: </span><span class="rvts25">FMS (frequency modulation sensitivity) is the degree to which the channel is affected by the LFO.</span></p>
+<p class="rvps3"><span class="rvts26">AMS</span><span class="rvts25">: AMS (amplitude modulation sensitivity) is the degree to which the channel is affected by the LFO.</span><br><span class="rvts26">FB: </span><span class="rvts25">Feedback is the degree to which operator 1 feeds back into itself.</span></p>
+<p class="rvps3"><span class="rvts26">ALG: </span><span class="rvts25">The operators may be arranged in eight different configurations, called ALG (Algorithms).</span><br><span class="rvts15"></span><br><span class="rvts92">And each individual operator has this own values:</span><br><span class="rvts15"></span><br><span class="rvts26">MULT: </span><span class="rvts25">MULT ranges from 0 to 15 (decimal), and multiplies the overall frequency</span><br><span class="rvts26">DT: </span><span class="rvts25">DT gives small variations from the overall frequency × MULT.</span></p>
+<p class="rvps3"><span class="rvts26">TL: </span><span class="rvts25">Total level, the highest amplitude of the envelope.</span></p>
+<p class="rvps3"><span class="rvts26">AR: </span><span class="rvts25">Attack rate, the angle of initial amplitude increase.</span></p>
+<p class="rvps3"><span class="rvts26">DR</span><span class="rvts90">:</span><span class="rvts25"> The angle of initial amplitude decrease.</span></p>
+<p class="rvps3"><span class="rvts26">D2R:</span><span class="rvts25"> The angle of secondary amplitude decrease. This will continue indefinitely unless ‘key off’ occurs.</span></p>
+<p class="rvps3"><span class="rvts26">SL:</span><span class="rvts25"> The amplitude at which the slower amplitude decrease starts.</span></p>
+<p class="rvps3"><span class="rvts26">RR:</span><span class="rvts25"> The final angle of amplitude decrease, after ‘key off’.</span></p>
+<p class="rvps3"><span class="rvts26">RS:</span><span class="rvts25"> Rate scaling, the degree to which envelopes become shorter as frequencies become higher. For example, high notes on a piano fade much more quickly than low notes.</span></p>
+<p class="rvps3"><span class="rvts26">SSG-EG:</span><span class="rvts25"> This slider will set the SSG-EG behavior, it will modify the operator's level dinamically, following the next shapes:<br>
+<img border="0" hspace="1" vspace="1" src="lib/YM2612_SSGEG.PNG">
+</span></p>
+<p class="rvps3"><span class="rvts26">AM Checkbox:</span><span class="rvts25"> Amplitude Modulation enable, whether or not this operator will allow itself to be modified by the LFO. Changing the amplitude of the slots (those colored gray in the diagram on page 3) changes the loudness of the note; changing the amplitude of the other operators changes its flavor.</span></p>
+<p class="rvps3"><span class="rvts26">SSG-EG Checkbox:</span><span class="rvts25"> SSG-EG control enable, this control will enable or disable the above explained slider (SSG-EG).</span></p>
+<p class="rvps3"><span class="rvts25"><br></span></p>
+<p class="rvps3"><img border="0" alt hspace="1" vspace="1" src="lib/YM2612_Envelope.png"></p>
+<p class="rvps3"><span class="rvts25"><br></span></p>
+<p class="rvps3"><span class="rvts25">The sound starts when the key is depressed, a process called ‘key on’. The sound has an attack, a strong primary decay, followed by a slow secondary decay. The sound continues this secondary decay until the key is released, a process called ‘key off’. The sound then begins a rapid final decay, representing for example a piano note after the key has been released and the damper has come down on the strings.</span></p>
+<p class="rvps3"><span class="rvts25">The envelope is represented by the above amplitudes and angles.</span></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; by Delek. All Rights Reserved.</div>
+		</div>
+	</body>
+	
+</html>
+

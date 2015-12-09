@@ -1,0 +1,589 @@
+﻿/* ========== Text Styles ========== */
+hr { color: #000000}
+body, table, span.rvts0 /* Normal text */
+{
+ font-size: 10pt;
+ font-family: 'Arial', 'Helvetica', sans-serif;
+ font-style: normal;
+ font-weight: normal;
+ color: #999999;
+ text-decoration: none;
+}
+span.rvts1 /* Heading */
+{
+ font-weight: bold;
+ color: #0000ff;
+}
+span.rvts2 /* Subheading */
+{
+ font-weight: bold;
+ color: #000080;
+}
+span.rvts3 /* Keywords */
+{
+ font-style: italic;
+ color: #800000;
+}
+a.rvts4, span.rvts4 /* Jump 1 */
+{
+ color: #008000;
+ text-decoration: underline;
+}
+a.rvts5, span.rvts5 /* Jump 2 */
+{
+ color: #008000;
+ text-decoration: underline;
+}
+span.rvts6 /* Font Style */
+{
+ font-family: 'Tahoma', 'Geneva', sans-serif;
+ font-style: italic;
+ color: #c0c0c0;
+}
+a.rvts7, span.rvts7 /* Font Style */
+{
+ font-family: 'Tahoma', 'Geneva', sans-serif;
+ font-style: italic;
+ color: #6666ff;
+ text-decoration: underline;
+}
+span.rvts8 /* Font Style */
+{
+}
+span.rvts9
+{
+ font-weight: bold;
+}
+span.rvts10
+{
+ font-size: 16pt;
+ font-weight: bold;
+}
+span.rvts11
+{
+ font-size: 12pt;
+}
+span.rvts12
+{
+ font-size: 12pt;
+ font-weight: bold;
+}
+span.rvts13
+{
+ font-family: 'Verdana', 'Geneva', sans-serif;
+}
+span.rvts14
+{
+ font-family: 'Verdana', 'Geneva', sans-serif;
+ font-weight: bold;
+}
+span.rvts15
+{
+ font-size: 12pt;
+ font-family: 'Verdana';
+ font-weight: bold;
+}
+span.rvts16
+{
+ font-size: 16pt;
+ font-family: 'Verdana', 'Geneva', sans-serif;
+ font-weight: bold;
+}
+a.rvts17, span.rvts17
+{
+ font-family: 'Verdana', 'Geneva', sans-serif;
+ font-weight: bold;
+ color: #0000ff;
+ text-decoration: underline;
+}
+a.rvts17:hover { color: #0000ff; }
+span.rvts18
+{
+ font-family: 'Verdana', ', 'Lucida Sans Unicode', 'Arial', 'Helvetica', sans-serif;
+}
+span.rvts19
+{
+ font-family: 'Verdana', ', 'Lucida Sans Unicode', 'Arial', 'Helvetica', sans-serif;
+ font-weight: bold;
+}
+span.rvts20
+{
+ font-size: 12pt;
+ font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial', 'Helvetica', sans-serif;
+}
+span.rvts21
+{
+ font-family: 'Verdana', 'Geneva', sans-serif;
+}
+span.rvts22
+{
+ font-size: 8pt;
+ font-family: 'Verdana', 'Geneva', sans-serif;
+}
+span.rvts23
+{
+ font-size: 8pt;
+ font-family: 'Verdana', 'Geneva', sans-serif;
+ font-weight: bold;
+}
+span.rvts24
+{
+ font-size: 8pt;
+ font-family: 'Verdana', 'Geneva', sans-serif;
+}
+span.rvts25
+{
+ font-size: 9pt;
+ font-family: 'Verdana', 'Geneva', sans-serif;
+}
+span.rvts26
+{
+ font-size: 9pt;
+ font-family: 'Verdana', 'Geneva', sans-serif;
+ font-weight: bold;
+}
+span.rvts27
+{
+ font-size: 9pt;
+ font-family: 'Verdana', 'Geneva', sans-serif;
+}
+span.rvts28
+{
+ font-size: 12pt;
+ font-family: 'Verdana', 'Geneva', sans-serif;
+}
+span.rvts29
+{
+ font-size: 12pt;
+ font-family: 'Verdana', 'Geneva', sans-serif;
+}
+a.rvts30, span.rvts30
+{
+ font-size: 8pt;
+ font-family: 'Verdana', 'Geneva', sans-serif;
+ color: #0000ff;
+ text-decoration: underline;
+}
+a.rvts30:hover { color: #0000ff; }
+span.rvts31
+{
+ font-weight: bold;
+ color: #ffffff;
+}
+span.rvts32
+{
+ color: #ffffff;
+}
+span.rvts33
+{
+ font-weight: bold;
+ color: ;
+}
+span.rvts34
+{
+ color: ;
+}
+span.rvts35
+{
+ font-weight: bold;
+ text-decoration: underline;
+}
+span.rvts36
+{
+ font-size: 12pt;
+ font-weight: bold;
+ text-decoration: underline;
+}
+span.rvts37
+{
+ text-decoration: underline;
+}
+span.rvts38
+{
+ font-size: 14pt;
+ font-weight: bold;
+}
+span.rvts39
+{
+ font-size: 14pt;
+ font-family: 'Verdana', 'Geneva', sans-serif;
+ font-weight: bold;
+}
+span.rvts40
+{
+ font-family: 'Verdana', 'Geneva', sans-serif;
+ font-weight: bold;
+ color: ;
+}
+span.rvts41
+{
+ font-family: 'Verdana', 'Geneva', sans-serif;
+ color: ;
+}
+span.rvts42
+{
+ font-size: 12pt;
+ font-family: 'Times New Roman', 'Times', serif;
+ font-weight: bold;
+}
+span.rvts43
+{
+ font-size: 12pt;
+ font-family: 'Times New Roman', 'Times', serif;
+}
+span.rvts44
+{
+ font-size: 12pt;
+ font-family: 'Times New Roman', 'Times', serif;
+ font-weight: bold;
+ background-color: #8cb4d2;
+}
+span.rvts45
+{
+ font-size: 12pt;
+ font-family: 'Times New Roman', 'Times', serif;
+ background-color: #8cb4d2;
+}
+span.rvts46
+{
+ font-size: 12pt;
+ font-family: 'Times New Roman', 'Times', serif;
+ font-weight: bold;
+ color: #8cb4d2;
+ background-color: #8cb4d2;
+}
+span.rvts47
+{
+ font-size: 12pt;
+ font-family: 'Times New Roman', 'Times', serif;
+ color: #8cb4d2;
+ background-color: #8cb4d2;
+}
+span.rvts48
+{
+ font-size: 12pt;
+ font-family: 'Times New Roman', 'Times', serif;
+ font-weight: bold;
+ color: #8cb4d2;
+}
+span.rvts49
+{
+ font-size: 12pt;
+ font-family: 'Times New Roman', 'Times', serif;
+ color: #8cb4d2;
+}
+a.rvts50, span.rvts50
+{
+ font-size: 12pt;
+ font-family: 'Times New Roman', 'Times', serif;
+ color: #0000ff;
+ text-decoration: underline;
+}
+a.rvts51, span.rvts51
+{
+ font-size: 12pt;
+ font-family: 'Times New Roman', 'Times', serif;
+ color: #0000ff;
+ text-decoration: none;
+}
+a.rvts52, span.rvts52
+{
+ font-size: 12pt;
+ font-family: 'Times New Roman', 'Times', serif;
+ text-decoration: none;
+}
+a.rvts53, span.rvts53
+{
+ font-size: 12pt;
+ font-family: 'Times New Roman', 'Times', serif;
+ color: #8b0000;
+ text-decoration: none;
+}
+span.rvts54
+{
+ font-size: 12pt;
+ font-family: 'Times New Roman', 'Times', serif;
+ font-weight: bold;
+ color: #00a5ff;
+}
+span.rvts55
+{
+ font-size: 12pt;
+ font-family: 'Times New Roman', 'Times', serif;
+ color: #00a5ff;
+}
+a.rvts56, span.rvts56
+{
+ font-size: 12pt;
+ font-family: 'Times New Roman', 'Times', serif;
+ color: #3f3f3f;
+ text-decoration: none;
+}
+a.rvts57, span.rvts57
+{
+ font-size: 12pt;
+ font-family: 'Times New Roman', 'Times', serif;
+ color: #3f3f3f;
+ text-decoration: underline;
+}
+span.rvts58
+{
+ font-size: 12pt;
+ font-family: 'Times New Roman', 'Times', serif;
+ font-style: italic;
+}
+span.rvts59
+{
+ font-size: 12pt;
+ font-family: 'Times New Roman', 'Times', serif;
+ font-style: italic;
+ font-weight: bold;
+}
+a.rvts60, span.rvts60
+{
+ font-size: 12pt;
+ font-family: 'Times New Roman', 'Times', serif;
+ color: #0000ff;
+ text-decoration: underline;
+}
+a.rvts60:hover { color: #0000ff; }
+span.rvts61
+{
+ font-size: 12pt;
+ font-family: 'Verdana', 'Geneva', sans-serif;
+}
+span.rvts62
+{
+ font-size: 12pt;
+ font-family: 'Verdana', 'Geneva', sans-serif;
+ font-weight: bold;
+}
+span.rvts63
+{
+ font-size: 12pt;
+ font-family: 'Verdana', 'Geneva', sans-serif;
+ font-style: italic;
+}
+span.rvts64
+{
+ font-size: 12pt;
+ font-family: 'Verdana', 'Geneva', sans-serif;
+ font-style: italic;
+ font-weight: bold;
+}
+a.rvts65, span.rvts65
+{
+ font-size: 12pt;
+ font-family: 'Verdana', 'Geneva', sans-serif;
+ color: #3f3f3f;
+ text-decoration: none;
+}
+a.rvts66, span.rvts66
+{
+ font-size: 12pt;
+ font-family: 'Verdana', 'Geneva', sans-serif;
+ color: #3f3f3f;
+ text-decoration: underline;
+}
+a.rvts67, span.rvts67
+{
+ font-size: 12pt;
+ font-family: 'Verdana', 'Geneva', sans-serif;
+ color: #0000ff;
+ text-decoration: underline;
+}
+a.rvts67:hover { color: #0000ff; }
+span.rvts68
+{
+ font-size: 12pt;
+ font-family: 'Verdana', 'Geneva', sans-serif;
+ color: #8cb4d2;
+}
+span.rvts69
+{
+ font-size: 12pt;
+ font-family: 'Verdana', 'Geneva', sans-serif;
+ color: #00a5ff;
+}
+span.rvts70
+{
+ font-size: 12pt;
+ font-family: 'Verdana', 'Geneva', sans-serif;
+ font-weight: bold;
+ color: #00a5ff;
+}
+a.rvts71, span.rvts71
+{
+ font-size: 8pt;
+ font-family: 'Verdana', 'Geneva', sans-serif;
+ color: #3f3f3f;
+ text-decoration: none;
+}
+a.rvts72, span.rvts72
+{
+ font-size: 8pt;
+ font-family: 'Verdana', 'Geneva', sans-serif;
+ color: #3f3f3f;
+ text-decoration: underline;
+}
+a.rvts73, span.rvts73
+{
+ font-size: 8pt;
+ font-family: 'Verdana', 'Geneva', sans-serif;
+ color: #0000ff;
+ text-decoration: underline;
+}
+a.rvts73:hover { color: #0000ff; }
+a.rvts74, span.rvts74
+{
+ font-family: 'Verdana', 'Geneva', sans-serif;
+ color: #3f3f3f;
+ text-decoration: none;
+}
+a.rvts75, span.rvts75
+{
+ font-family: 'Verdana', 'Geneva', sans-serif;
+ color: #3f3f3f;
+ text-decoration: underline;
+}
+a.rvts76, span.rvts76
+{
+ font-family: 'Verdana', 'Geneva', sans-serif;
+ color: #0000ff;
+ text-decoration: underline;
+}
+a.rvts76:hover { color: #0000ff; }
+span.rvts77
+{
+ font-family: 'Verdana', 'Geneva', sans-serif;
+}
+span.rvts78
+{
+ font-family: 'Verdana', 'Geneva', sans-serif;
+ font-weight: bold;
+}
+span.rvts79
+{
+ font-family: 'Verdana', 'Geneva', sans-serif;
+ font-style: italic;
+}
+span.rvts80
+{
+ font-family: 'Verdana', 'Geneva', sans-serif;
+ font-style: italic;
+ font-weight: bold;
+}
+span.rvts81
+{
+ font-family: 'Courier New', 'Courier', monospace;
+}
+span.rvts82
+{
+ font-size: 18pt;
+ font-weight: bold;
+}
+span.rvts83
+{
+ font-size: 18pt;
+ font-family: 'Verdana', 'Geneva', sans-serif;
+ font-weight: bold;
+}
+a.rvts84, span.rvts84
+{
+ font-size: 9pt;
+ font-family: 'Verdana', 'Geneva', sans-serif;
+ color: #0000ff;
+ text-decoration: underline;
+}
+a.rvts84:hover { color: #0000ff; }
+a.rvts85, span.rvts85
+{
+ color: #0000ff;
+ text-decoration: underline;
+}
+a.rvts85:hover { color: #0000ff; }
+a.rvts86, span.rvts86
+{
+ font-family: 'Verdana', 'Geneva', sans-serif;
+ color: #0000ff;
+ text-decoration: underline;
+}
+a.rvts86:hover { color: #0000ff; }
+span.rvts87
+{
+ font-size: 12pt;
+ text-decoration: underline;
+}
+span.rvts88
+{
+ font-family: 'Verdana', 'Geneva', sans-serif;
+ font-style: italic;
+}
+span.rvts89
+{
+ font-family: 'Verdana', 'Geneva', sans-serif;
+ font-style: italic;
+ font-weight: bold;
+}
+span.rvts90
+{
+ font-size: 9pt;
+ font-family: 'Verdana', 'Geneva', sans-serif;
+ font-style: italic;
+}
+span.rvts91
+{
+ font-size: 9pt;
+ font-family: 'Verdana', 'Geneva', sans-serif;
+ font-style: italic;
+ font-weight: bold;
+}
+span.rvts92
+{
+ font-size: 11pt;
+ font-family: 'Verdana', 'Geneva', sans-serif;
+ font-weight: bold;
+}
+/* ========== Para Styles ========== */
+p,ul,ol /* Paragraph Style */
+{
+ text-align: left;
+ text-indent: 0px;
+ padding: 0px 0px 0px 0px;
+ margin: 0px 0px 0px 0px;
+}
+.rvps1 /* Centered */
+{
+ text-align: center;
+}
+.rvps2 /* Paragraph Style */
+{
+ text-align: center;
+ border-color: #c0c0c0;
+ border-style: solid;
+ border-width: 1px;
+ border-right: none;
+ border-left: none;
+ padding: 2px 0px 2px 0px;
+ margin: 7px 0px 7px 0px;
+}
+.rvps3 /* Paragraph Style */
+{
+}
+.rvps4
+{
+ background: #000000;
+}
+.rvps5
+{
+ text-align: center;
+ background: #000000;
+}
+.rvps6
+{
+ text-align: center;
+}
+.rvps7
+{
+ margin: 7px 0px 7px 0px;
+}

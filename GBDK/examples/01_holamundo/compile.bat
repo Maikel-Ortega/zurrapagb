@@ -1,0 +1,1 @@
+lcc -o rom.gb main.c

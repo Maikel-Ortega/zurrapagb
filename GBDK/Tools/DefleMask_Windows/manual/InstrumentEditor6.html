@@ -1,0 +1,176 @@
+﻿<html>
+	
+<head>
+	<title>Instrument Editor</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+    <meta name="generator" content="HelpNDoc">
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript"><!--
+		var sTopicId = "InstrumentEditor6";
+		if (top.frames.length == 0)
+			top.location.href = "Manual.html?" + sTopicId
+		else if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+			top.FrameTOC.SelectTocItem(sTopicId);
+	</script>
+</head>
+
+<body>
+
+	<div id="topic_header">
+			<div id="topic_header_content">
+				<h1>Instrument Editor</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="SystemC64.html">System: Commodore 64</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="SystemC64.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="FAQ6.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="EffectsAdded6.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p class="rvps3"><span class="rvts15">COMMODORE 64 SYSTEM INSTRUMENTS EDITOR MENU:</span><br><span class="rvts25">
+<br>
+<p class="rvps3"><span class="rvts25"></span><br><img border="0" width="614" height="460" alt hspace="1" vspace="1" src="lib/C64_InstrumentEditor.png"><br><span class="rvts25"><br></span></p>
+<br>
+You can control the Commodore 64 sound using STD Instruments, you can set a Volume Macro that will control the global volume of the system or change it to control the Filter's cutoff-frequency, an Arpeggio Macro, a Duty Cycle Macro and a Wave Macro.
+<br>
+Regarding to the WAVE Macro, it has 9 values (0-8) and it is a 4bits bitmask (NOISE|PULSE|SAW|TRIANGLE). If you don't know what is a bitmask or you want to have a fast list, this are the values:<br>
+0 - No Wave.			<br>
+1 - Triangle.			<br>
+2 - Saw.			<br>
+3 - Triangle + Saw.		<br>
+4 - Pulse.			<br>
+5 - Pulse + Triangle.		<br>
+6 - Pulse + Saw.		<br>
+7 - Pulse + Triangle + Saw.	<br>
+8 - Noise.			<br>
+<br>
+Regarding to the Arpeggio Macro, it behavior is a little bit complicated when you use 1Axx effect (Reset ADSR), because the reset ADSR uses some frames to reset it, so the Arpeggio will not sound if the time is too short between notes.
+<br>
+The SID/Commodore 64 sound parameters are very complicated and may require lot of time to master them, here is a short explanation of all commands:<br><br>
+<h4>Attack/Decay</h4>
+<p>The ATTACK rate determines how rapidly the output of Voice rises from zero to peak amplitude when the Envelope Generator is Gated. The 16 ATTACK rates are listed below in Table 2.
+</p><p><b>The DECAY cycle follows the ATTACK cycle and the DECAY rate determines how rapidly the output falls from the peak amplitude to the selected SUSTAIN level. The 16 DECAY rates are listed in Table 2. 
+<br>
+DefleMask will render the Envelope dinamically, so it should be easy to get what you think.</p><br><br>
+<table>
+<tr>
+<td align="center" style="background:#000000;"><b> </b>
+</td><td align="center" style="background:#000000;"><b> </b>
+</td><td align="center" style="background:#000000;"><b>Attack Rate</b>
+</td><td align="center" style="background:#000000;"><b>Release Rate</b>
+</td></tr>
+<tr>
+<td align="center" style="background:#000000;"><b>DEC</b>
+</td><td align="center" style="background:#000000;"><b>HEX</b>
+</td><td align="center" style="background:#000000;"><b>(Time/Cycle)</b>
+</td><td align="center" style="background:#000000;"><b>(Time/Cycle)</b>
+</td></tr>
+<tr>
+<td> 0</td><td>(0)</td><td>2 mS</td><td>6 mS
+</td></tr>
+<tr>
+<td> 1</td><td>(1)</td><td>8 mS</td><td>24 mS
+</td></tr>
+<tr>
+<td> 2</td><td>(2)</td><td>16 mS</td><td>48 mS
+</td></tr>
+<tr>
+<td> 3</td><td>(3)</td><td>24 mS</td><td>72 mS
+</td></tr>
+<tr>
+<td> 4</td><td>(4)</td><td>38 mS</td><td>114 mS
+</td></tr>
+<tr>
+<td> 5</td><td>(5)</td><td>56 mS</td><td>168 mS
+</td></tr>
+<tr>
+<td> 6</td><td>(6)</td><td>68 mS</td><td>204 mS
+</td></tr>
+<tr>
+<td> 7</td><td>(7)</td><td>80 mS</td><td>240 mS
+</td></tr>
+<tr>
+<td> 8</td><td>(8)</td><td>100 mS</td><td>300 mS
+</td></tr>
+<tr>
+<td> 9</td><td>(9)</td><td>250 mS</td><td>750 mS
+</td></tr>
+<tr>
+<td> 10</td><td>(A)</td><td>500 mS</td><td>1.5 S
+</td></tr>
+<tr>
+<td> 11</td><td>(B)</td><td>800 mS</td><td>2.4 S
+</td></tr>
+<tr>
+<td> 12</td><td>(C)</td><td>1 S</td><td>3 S
+</td></tr>
+<tr>
+<td> 13</td><td>(D)</td><td>3 S</td><td>9 S
+</td></tr>
+<tr>
+<td> 14</td><td>(E)</td><td>5 S</td><td>15 S
+</td></tr>
+<tr>
+<td> 15</td><td>(F)</td><td>8 S</td><td>24 S
+</td></tr>
+<tr>
+<td>
+</td></tr></table>
+<br><br>
+<h4>Sustain/Release</h4>
+<p><b>The SUSTAIN cycle follows the DECAY cycle and the output of Voice will remain at the selected SUSTAIN amplitude as long as the Gate bit remains set. The SUSTAIN levels range from zero to peak amplitude in 16 linear steps, with a SUSTAIN value of 0 selecting zero amplitude and a SUSTAIN value of 15 (#F) selecting the peak amplitude. 
+</p><p>A SUSTAIN value of 8 would cause Voice to SUSTAIN at an amplitude one-half the peak amplitude reached by the ATTACK cycle.
+</p><p><b>The 16 RELEASE rates are identical to the DECAY rates.
+</p>
+<br>
+The pulse width resolution allows the width to be smoothly swept with no discernible stepping. Note that the Pulse waveform on Oscillator 1 must be selected in order for the Pulse Width registers to have any audible effect. A value of 0 or 100 in the Pulse Width will produce a constant DC output, while a value of 50 will produce a square wave.
+<br><br>
+The "SYNC" checkbox, when it is selected, synchronizes the fundamental frequency of Oscillator A with the fundamental frequency of Oscillator B, producing “Hard Sync” effects. Varying the frequency of Oscillator A with respect to Oscillator B produces a wide range of complex harmonic structures at the frequency of Oscillator B. In order for sync to occur Oscillator B must be set to some frequency other than zero but preferably lower than the frequency of Oscillator A.
+<br><br>
+The "RING" checkbox, when it is selected, replaces the Triangle waveform output of Oscillator A with a “Ring Modulated” combination of Oscillators A and B. Varying the frequency of Oscillator A with respect to Oscillator B produces a wide range of non-harmonic overtone structures for creating bell or gong sounds and for special effects. In order for ring modulation to be audible, the Triangle waveform of Oscillator A must be selected and Oscillator B must be set to some frequency other than zero.
+<br>Note: Oscillator A is the current channel used, oscillator B depends of what is the oscillator A. A=1, B=3. A=2, B=1. A=3, B=2.<br>
+<br>
+"Apply Filter To Instrument" checkbox will define if the instrument/channel will be processed by the Commodore 64 filter.
+<br><br>
+"Use Filter Values From Instrument" checkbox will overwrite the current Global Filter Values, you can set them at the start of the track and do not change them, or use this checkbox to change the filter behavior dynamically. Warning, setting this flag to true and not checking any of the Global filter parameters will, obviously, disable the filter. So any instrument that uses the filter will become inaudible, use with care.
+<br><br>
+"Filter Cutoff Macro" will, if it is enabled, modify dynamically the Filter Cutoff parameter with the Volume Macro rather than changing the volume of the soundchip. A value greater than 0 will Increment the Cutoff value. If it is unchecked, it will simply modify the volume (remember that the volume command in the Commodore 64 is global).
+<br><br>
+The Global Filter Parameters will control the Filters of the Commodore 64.<br>
+The "Resonance" will make the resonance of a peaking effect which emphasizes frequency components at the Cutoff Frequency of the Filter, causing a sharper sound. There are 16 Resonance settings ranging linearly from no resonance 0 to maximum resonance 15.
+<br><br>
+The "Cutoff parameter" will change the filter main center of modification, approximate Cutoff Frequency ranges between 30Hz and 10KHz.
+<br><br>
+H Pass (High Pass), B Pass (Band Pass) and L Pass (Low Pass) are all the types of filters that you can use with the Commodore 64.
+<br><br>
+With High Pass enabled, all frequency components above the Cutoff are passed unaltered, while all frequency components below the Cutoff are attenuated at a rate of 12 dB/Octave. The High Pass mode produces tinny, buzzy sounds.
+<br><br>
+With Band Pass enabled, all frequency components above and below the Cutoff are attenuated at a rate of 6 dB/Octave. The Band Pass mode produces thin, open sounds.
+<br><br>
+With Low Pass enabled, all frequency components below the Filter Cutoff Frequency are passed unaltered, while all frequency components above the Cutoff are attenuated at a rate of 12 dB/Octave. The low Pass mode produces full-bodied sounds.
+<br><br>
+Note: All of the three filter modes can be used togheter, they are added using subtractive synthesis.<br><br>
+"CH2 OFF", when checked, disconnect the Channel 2 from the direct audio path. Setting Channel 2 to bypass the Filter ("Through The Filter" Unchecked) and checking "CH2 OFF" prevents Channel 2 from reaching the audio output. This allows Channel 2 to be used for modulation purposes without any undesirable output.
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; by Delek. All Rights Reserved.</div>
+		</div>
+	</body>
+	
+</html>
+

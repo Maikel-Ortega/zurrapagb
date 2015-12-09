@@ -1,0 +1,111 @@
+﻿<html>
+	
+<head>
+	<title>Behavior</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+    <meta name="generator" content="HelpNDoc">
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript"><!--
+		var sTopicId = "Behavior";
+		if (top.frames.length == 0)
+			top.location.href = "Manual.html?" + sTopicId
+		else if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+			top.FrameTOC.SelectTocItem(sTopicId);
+	</script>
+</head>
+
+<body>
+
+	<div id="topic_header">
+			<div id="topic_header_content">
+				<h1>Behavior</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="SystemYAMAHAYMU759.html">System: YAMAHA YMU759</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="SystemYAMAHAYMU759.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="SystemYAMAHAYMU759.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="InstrumentEditor.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p class="rvps3"><span class="rvts15">Here are some descriptions of the current system's behavior:</span><br><span class="rvts13"></span>
+
+<br><span class="rvts26">Emulator issues on Windows Vista:</span><br><span class="rvts13">Because of the nature of the YMU759 Emulator, it is possible to suffer some problems with some Windows Vista sound drivers. I recommend using Windows 7 or XP if you want to make some tunes using the YMU759.</span><br>
+
+<br><span class="rvts26">Wav Exporting:</span><br><span class="rvts13">Although it is possible to export WAV files on the other supported systems, is not possible to export a WAV file of the song using the YMU759. The way in which the emulator works does not permit read the output generated. WAV exporting using the YMU759 can be possible on future versions, but I need to hack the emulator dll or switch to other emulator, and there are other priorities right now.</span><br><span class="rvts13">However, you can always record the output of your soundcard while DefleMask is playing, or record a video showing your tracking skills.</span><br><span class="rvts13"></span><br>
+
+<span class="rvts26">Instrument Column:</span><br><span class="rvts13">The YMU759 is not capable to switch instruments on the fly, so the instrument column will only accept the first value of the first row to set the channel instrument. All instrument changes would be translated to the first row of the first pattern.</span><br><span class="rvts13"></span><br><span class="rvts26">Volume column:</span></p>
+
+
+<p class="rvps3"><span class="rvts13">You can designate a value of 0~7F, but there are ranges in which the volume does not change.</span></p>
+<p class="rvps3"><span class="rvts13">For example the volume does not change for 0~3.</span></p>
+<p class="rvps3"><span class="rvts13">Refer to the following table when designating the value.</span></p>
+<p class="rvps3"><span class="rvts13"><br></span></p>
+<p class="rvps3"><span class="rvts13">00~03 </span><span class="rvts13"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts13">SILENCE</span></p>
+<p class="rvps3"><span class="rvts13">04~07 </span><span class="rvts13"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts13">-47.95db</span></p>
+<p class="rvps3"><span class="rvts13">08~0B </span><span class="rvts13"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts13">-42.49db</span></p>
+<p class="rvps3"><span class="rvts13">0C~0F </span><span class="rvts13"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts13">-37.10db</span></p>
+<p class="rvps3"><span class="rvts13">10~13 </span><span class="rvts13"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts13">-33.00db</span></p>
+<p class="rvps3"><span class="rvts13">14~17 </span><span class="rvts13"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts13">-29.67db</span></p>
+<p class="rvps3"><span class="rvts13">1A~1D </span><span class="rvts13"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts13">-26.91db</span></p>
+<p class="rvps3"><span class="rvts13">1E~1F </span><span class="rvts13"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts13">-24.49db</span></p>
+<p class="rvps3"><span class="rvts13">20~23 </span><span class="rvts13"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts13">-22.38db</span></p>
+<p class="rvps3"><span class="rvts13">24~27 </span><span class="rvts13"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts13">-20.51db</span></p>
+<p class="rvps3"><span class="rvts13">2A~2D </span><span class="rvts13"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts13">-18.82db</span></p>
+<p class="rvps3"><span class="rvts13">2E~2F </span><span class="rvts13"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts13">-17.27db</span></p>
+<p class="rvps3"><span class="rvts13">30~33 </span><span class="rvts13"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts13">-15.84db</span></p>
+<p class="rvps3"><span class="rvts13">34~37 </span><span class="rvts13"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts13">-14.53db</span></p>
+<p class="rvps3"><span class="rvts13">3A~3D </span><span class="rvts13"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts13">-13.31db </span></p>
+<p class="rvps3"><span class="rvts13">3E~3F </span><span class="rvts13"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts13">-12.19db</span></p>
+<p class="rvps3"><span class="rvts13">40~43 </span><span class="rvts13"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts13">-11.11db</span></p>
+<p class="rvps3"><span class="rvts13">44~47 </span><span class="rvts13"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts13">-10.10db</span></p>
+<p class="rvps3"><span class="rvts13">4A~4D </span><span class="rvts13"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts13">-9.14db</span></p>
+<p class="rvps3"><span class="rvts13">4E~4F </span><span class="rvts13"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts13">-8.25db</span></p>
+<p class="rvps3"><span class="rvts13">50~53 </span><span class="rvts13"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts13">-7.38db</span></p>
+<p class="rvps3"><span class="rvts13">54~57 </span><span class="rvts13"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts13">-6.56db</span></p>
+<p class="rvps3"><span class="rvts13">5A~5D </span><span class="rvts13"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts13">-5.79db</span></p>
+<p class="rvps3"><span class="rvts13">5E~5F </span><span class="rvts13"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts13">-5.04db</span></p>
+<p class="rvps3"><span class="rvts13">60~63 </span><span class="rvts13"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts13">-4.34db</span></p>
+<p class="rvps3"><span class="rvts13">64~67 </span><span class="rvts13"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts13">-3.63db</span></p>
+<p class="rvps3"><span class="rvts13">6A~6D </span><span class="rvts13"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts13">-2.98db</span></p>
+<p class="rvps3"><span class="rvts13">6E~6F </span><span class="rvts13"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts13">-2.34db</span></p>
+<p class="rvps3"><span class="rvts13">70~73 </span><span class="rvts13"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts13">-1.71db</span></p>
+<p class="rvps3"><span class="rvts13">74~77 </span><span class="rvts13"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts13">-1.13db</span></p>
+<p class="rvps3"><span class="rvts13">7A~7D </span><span class="rvts13"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts13">-0.56db</span></p>
+<p class="rvps3"><span class="rvts13">7E~7F </span><span class="rvts13"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts13">0db</span><span class="rvts13"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts13"> (FULL VOLUME - Default value)</span></p>
+<p class="rvps3"><span class="rvts13"></span><br><span class="rvts15">Effects Behavior:</span><br><span class="rvts15"><br></span></p>
+<p class="rvps3"><span class="rvts26">Effect 4 - Vibrato/Modulation:</span></p>
+<p class="rvps3"><span class="rvts13">You can designate a value of 0~7F, but DefleMask, internally, recognizes only five levels:</span></p>
+<p class="rvps3"><span class="rvts13"><br></span></p>
+<p class="rvps3"><span class="rvts13">0 Turn vibrato off for all operators.</span></p>
+<p class="rvps3"><span class="rvts13">1~1F Vibrato will be as designated by the instrument DVB Value.</span></p>
+<p class="rvps3"><span class="rvts13">1F~3F Add +1 to the Vibrato DVB value of the instrument.</span></p>
+<p class="rvps3"><span class="rvts13">40~5F Add +2 to the Vibrato DVB value of the instrument.</span></p>
+<p class="rvps3"><span class="rvts13">60~7F Add +3 to the Vibrato DVB value of the instrument.</span></p>
+<p class="rvps3"><span class="rvts13">If adding to the DVB value would cause DVB to exceed +3, the result will be +3.</span></p>
+<p class="rvps3"><span class="rvts13"><br></span></p>
+<p class="rvps3"><span class="rvts26">Effect 8 - Panning:</span></p>
+<p class="rvps3"><span class="rvts13">You can designate a value of 0~7F.</span><br><span class="rvts13">0 means full left, 7F means full right.</span></p>
+<p class="rvps3"><span class="rvts13">You can obtain specific panning values using intermediate values, such as 5A.</span></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; by Delek. All Rights Reserved.</div>
+		</div>
+	</body>
+	
+</html>
+

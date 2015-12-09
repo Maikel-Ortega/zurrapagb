@@ -1,0 +1,85 @@
+<html>
+	
+<head>
+	<title>Effects Added</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+    <meta name="generator" content="HelpNDoc">
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript"><!--
+		var sTopicId = "EffectsAdded1";
+		if (top.frames.length == 0)
+			top.location.href = "Manual.html?" + sTopicId
+		else if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+			top.FrameTOC.SelectTocItem(sTopicId);
+	</script>
+</head>
+
+<body>
+
+	<div id="topic_header">
+			<div id="topic_header_content">
+				<h1>Effects Added</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="SystemSEGAGenesis.html">System: SEGA Genesis</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="SystemSEGAGenesis.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="InstrumentEditor1.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="FAQ2.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p class="rvps3"><span class="rvts15">Effects Added:</span></p>
+<p class="rvps3"><span class="rvts15"></span><br><span class="rvts15">YM2612 Effects Added:</span><br><span class="rvts15"></span><br><span class="rvts26">10xy - LFO Control:</span></p>
+<p class="rvps3"><span class="rvts13">This effect controls the Low Frequency oscillator of the YAMAHA YM2612.</span><br><span class="rvts13">The x value set if the LFO is on or off, a zero x turns the LFO off, a non zero value turns the LFO on.</span><br><span class="rvts13">The y value controls the speed of the LFO, you can designate a value from 0 to 7.</span><br><span class="rvts13"></span><br><span class="rvts26">11xx - Feedback Control:</span></p>
+<p class="rvps3"><span class="rvts13">The FB is a global parameter of a YM2612's channel. You can designate xx with a value from 0 to 7.</span></p>
+<p class="rvps3"><span class="rvts26"> &nbsp; &nbsp; &nbsp; &nbsp;</span><br><span class="rvts26">12xx - TL Operator 1 Control:</span></p>
+<p class="rvps3"><span class="rvts13">With this effect you can modify the TL of the operator 1. You can designate xx with a value from 0 to 7F.</span></p>
+<p class="rvps3"><span class="rvts26"><br></span></p>
+<p class="rvps3"><span class="rvts26">13xx - TL Operator 2 Control:</span></p>
+<p class="rvps3"><span class="rvts13">With this effect you can modify the TL of the operator 2. You can designate xx with a value from 0 to 7F.</span></p>
+<p class="rvps3"><span class="rvts26"><br></span></p>
+<p class="rvps3"><span class="rvts26">14xx - TL Operator 3 Control:</span></p>
+<p class="rvps3"><span class="rvts13">With this effect you can modify the TL of the operator 3. You can designate xx with a value from 0 to 7F.</span></p>
+<p class="rvps3"><span class="rvts26"><br></span></p>
+<p class="rvps3"><span class="rvts26">15xx - TL Operator 4 Control:</span></p>
+<p class="rvps3"><span class="rvts13">With this effect you can modify the TL of the operator 4. You can designate xx with a value from 0 to 7F.</span></p>
+<p class="rvps3"><span class="rvts26"></span>
+<br>
+<span class="rvts26">16xy - MULT Control:</span><br><span class="rvts13">The Multiplier factor is a frequency multiplier, &nbsp;all of the 4 operators are capable of have its own values of MULT.</span><br><span class="rvts13">The x value is the operator to modify, you can designate a value from 1 to 4 (0 will be ignored).</span></p>
+<p class="rvps3"><span class="rvts13">The y value controls the MULT value, you can designate a value from 0 to F.</span></p>
+<p class="rvps3"><span class="rvts26"><br></span></p>
+<p class="rvps3"><span class="rvts26">17xx - DAC Enable:</span><br><span class="rvts13">This effect will enable the sample features of the last FM Channel of the YM2612. A non-zero value will enable the sample output, and a zero value will disable it.<br>
+This effect can be used on all channels, but only will affect the last channel of YM2612.</p>
+<br>
+<p class="rvps3"><span class="rvts26">19xx - Global AR Control:</span><br><span class="rvts13">This effect will control all the AR values of all operators of the current instrument, a value higher than 0x1F (31) would be ignored.<br></p>
+<br>
+<p class="rvps3"><span class="rvts26">1Axx - AR Operator 1 Control:</span><br><span class="rvts13">This effect will control the AR value of the operator number 1 of the current instrument, a value higher than 0x1F (31) would be ignored.<br></p><p class="rvps3"><span class="rvts26"><br></span></p>
+<p class="rvps3"><span class="rvts26">1Bxx - AR Operator 2 Control:</span><br><span class="rvts13">This effect will control the AR value of the operator number 2 of the current instrument, a value higher than 0x1F (31) would be ignored.<br></p><p class="rvps3"><span class="rvts26"><br></span></p>
+<p class="rvps3"><span class="rvts26">1Cxx - AR Operator 3 Control:</span><br><span class="rvts13">This effect will control the AR value of the operator number 3 of the current instrument, a value higher than 0x1F (31) would be ignored.<br></p><p class="rvps3"><span class="rvts26"><br></span></p>
+<p class="rvps3"><span class="rvts26">1Dxx - AR Operator 4 Control:</span><br><span class="rvts13">This effect will control the AR value of the operator number 4 of the current instrument, a value higher than 0x1F (31) would be ignored.<br></p><p class="rvps3"><span class="rvts26"><br></span></p>
+<br>
+<p class="rvps3"><span class="rvts15">SN76489 Effects Added:</span></p>
+<p class="rvps3"><span class="rvts26"></span><br><span class="rvts26">20xy - Change Noise Mode:</span></p>
+<p class="rvps3"><span class="rvts13">This effect only works on SN76489 (PSG) channels.</span><br><span class="rvts13">This effect will change the way in which the SN76489 makes the noise.</span><br><span class="rvts13">Value x sets the special noise mode, if it is set to 0 only 3 frequencies can be done: C, C# and D.</span><br><span class="rvts13">If it is set to a non 0 value, the noise can reach any frequency but the third square of the SN76489 will be turned off. The Noise channel will use the frequency of the third Square.</span><br><span class="rvts13">Value y sets the type of noise, setting it to 0 will enable the periodic noise mode, if it is set to a non zero value, white noise generation will be enabled.</span><br><span class="rvts13">Keep in mind that, after changing this value, you have to play the current track in order to update the emulator noise mode.</span><br><span class="rvts13"><br></span></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; by Delek. All Rights Reserved.</div>
+		</div>
+	</body>
+	
+</html>
+

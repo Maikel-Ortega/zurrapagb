@@ -1,0 +1,149 @@
+<html>
+	
+<head>
+	<title>Standard Effects</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+    <meta name="generator" content="HelpNDoc">
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript"><!--
+		var sTopicId = "StandardEffects";
+		if (top.frames.length == 0)
+			top.location.href = "Manual.html?" + sTopicId
+		else if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+			top.FrameTOC.SelectTocItem(sTopicId);
+	</script>
+</head>
+
+<body>
+
+	<div id="topic_header">
+			<div id="topic_header_content">
+				<h1>Standard Effects</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="DefleMaskMain.html">DefleMask Main</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="DefleMaskMain.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="Controls.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="Skins.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p class="rvps3"><span class="rvts15">Standard Effects</span><br><span class="rvts13"></span><br><span class="rvts13">DefleMask uses Protracker's standard MOD effect enumeration. Like other trackers, however, the speed and behavior of the commands can be processed differently.</span><br><span class="rvts13"></span><br><span class="rvts13">Remember that the current system can change how effects are processed.</span><br><span class="rvts13">In order to learn more about the changes and new effects available on a desired system, you will need to check that system's category in this manual.</span><br><span class="rvts13"></span><br><span class="rvts70">Effects list</span><span class="rvts69"> </span><br><span class="rvts68"></span><br>
+
+<a class="rvts76" href="StandardEffects.html#0xy">0xy - Arpeggio</a><br>
+<a class="rvts76" href="StandardEffects.html#1xx">1xx - Portamento up</a><br>
+<a class="rvts76" href="StandardEffects.html#2xx">2xx - Portamento down</a><br>
+<a class="rvts76" href="StandardEffects.html#3xx">3xx - Portamento to note</a><br>
+<a class="rvts76" href="StandardEffects.html#4xy">4xy - Vibrato</a><br>
+<a class="rvts76" href="StandardEffects.html#5xy">5xy - Portamento to note and volume slide</a><br>
+<a class="rvts76" href="StandardEffects.html#6xy">6xy - Vibrato and volume slide</a><br>
+<a class="rvts76" href="StandardEffects.html#7xy">7xy - Tremolo</a><br>
+<a class="rvts76" href="StandardEffects.html#8xx">8xx - Panning</a><br>
+<a class="rvts76" href="StandardEffects.html#9xx">9xx - Set Speed Value 1</a><br>
+<a class="rvts76" href="StandardEffects.html#Axy">Axy - Volume Slide</a><br>
+<a class="rvts76" href="StandardEffects.html#Bxx">Bxx - Position Jump</a><br>
+<a class="rvts76" href="StandardEffects.html#Cxx">Cxx - Retrig</a><br>
+<a class="rvts76" href="StandardEffects.html#Dxx">Dxx - Pattern Break</a><br>
+<a class="rvts76" href="StandardEffects.html#Exx">Exx - Extended Commands</a><br>
+<a class="rvts76" href="StandardEffects.html#Fxx">Fxx - Set Speed Value 2</a><br>
+
+<br>
+
+<a name="0xy"></a>
+<span class="rvts78">0xy - Arpeggio</span>
+<span class="rvts77"> </span><br><span class="rvts77"></span><br><span class="rvts77">This effect changes the pitch of the note rapidly, with the speed of this note pitch change being set by the Arpeggio Speed selector. You can create 3 different pitches, the first one is the base note, the second one is note + x semitones, and the third one is note + y semitones. The effect will work until the effect is turned off by setting xy to 00.</span><br><span class="rvts77"></span><br><span class="rvts77"></span><br><a name="1xx"></a>
+<span class="rvts78">1xx - Portamento Up</span><span class="rvts77"> </span><br><span class="rvts77"></span><br><span class="rvts77">This effect will change the frequency by adding the xx value on each tick. In other words, value xx defines speed of the portamento. The effect will continue until it is turned off by setting xx to 00.</span><br><span class="rvts77"></span><br><span class="rvts77"></span><br><a name="2xx"></a>
+<span class="rvts78">2xx - Portamento Down</span><span class="rvts77"> </span><br><span class="rvts77"></span><br><span class="rvts77">This effect will change the frequency by subtracting the xx value on each tick. In other words, value xx defines speed of the portamento. The effect will continue it is turned off by setting xx to 00.</span><br><span class="rvts77"></span><br><span class="rvts77"></span><br><a name="3xx"></a>
+<span class="rvts78">3xx - Porta to note</span><span class="rvts77"> </span><br><span class="rvts77"></span><br><span class="rvts77">This effect will change the frequency of the previous note to the new note with a speed of xx.</span><br><span class="rvts77">The effect will continue until a new note is triggered, it reaches the pitch of the second note, or the effect is turned off by setting xy to 00.</span><br><span class="rvts77"></span><br><a name="4xy"></a>
+<span class="rvts78">4xy - Vibrato</span><span class="rvts77"> </span><br><span class="rvts77"></span><br><span class="rvts77">Sine vibrato, changes frequency up and down with specified depth and speed. Value x defines speed of the vibrato. 1 is minimum speed, F is maximum speed. Value y defines depth of the vibrato. Maximum depth is a full note.</span><br><span class="rvts77">The effect will continue until the effect is turned off by setting xy to 00.</span></p>
+
+<p class="rvps3"><span class="rvts77"></span><br><a name="5xy"></a>
+<span class="rvts78">5xy - Portamento to note and volume slide</span><br><span class="rvts77"></span><br><span class="rvts77">Continues previous 3xx effect and combine the result with a volume slide that works like Axy effect. </span><br>
+
+<p class="rvps3"><span class="rvts77"></span><br><a name="6xy"></a>
+<span class="rvts78">6xy -  Vibrato and volume slide</span><br><span class="rvts77"></span><br><span class="rvts77">Continues previous 4xx effect and combine the result with a volume slide that works like Axy effect. </span><br>
+
+<p class="rvps3"><span class="rvts77"></span><br><a name="7xy"></a>
+<span class="rvts78">7xy -  Tremolo</span><br><span class="rvts77"></span><br><span class="rvts77">Similar to the vibrato, but changes the volume amplidude instead of the pitch. Value x for speed, and y value for depth.</span><br>
+
+<p class="rvps3"><span class="rvts77"></span><br><a name="8xx"></a>
+<span class="rvts78">8xx - Panning</span><br><span class="rvts77"></span><br><span class="rvts77">Panning will change the sound output of the channel to the right or the left speakers, normally it is 0x01 right, 0x10 left, and 0x11 both.  However, some systems have different stereo behavior. You will need to check these individually.</span><br><span class="rvts77"></span>
+
+<br>
+<span class="rvts77"></span><br><a name="9xx"></a>
+<span class="rvts78">9xx - Set Speed Value 1</span><br><span class="rvts78"></span><br><span class="rvts77">This command will set the playback speed 1 dinamically.</span></p>
+
+
+<span class="rvts77"></span><br><a name="AxY"></a>
+<span class="rvts78">Axy - Volume Slide</span><br><span class="rvts78"></span><br><span class="rvts77">
+Volume slide up or down. Positive x value and zero y value defines speed of the volume slide going up, positive y value and zero x value defines speed of the volume slide going down.
+</span></p>
+
+<span class="rvts77"></span><br><a name="Bxx"></a>
+<span class="rvts78">Bxx - Position Jump</span><br><span class="rvts78"></span><br><span class="rvts77">This command will cause the tracker to jump to pattern position xx (hex). If used together with a pattern break, you can also specify the starting row (by default, it will play from the start of the pattern).</span></p>
+
+<span class="rvts77"></span><br><a name="Cxx"></a>
+<span class="rvts78">Cxx - Retrig</span><br><span class="rvts78"></span><br><span class="rvts77">Retrig the current note xx times on a tick. If the parameter xx is equal or higher than tick time, the effect is ignored. This effect will work until the row ends.</span></p>
+
+<br>
+<span class="rvts77"></span><br><a name="Dxx"></a>
+<span class="rvts78">Dxx - Pattern Break</span><br><span class="rvts78"></span><br><span class="rvts77">This command will stop playing the current pattern and will jump to the next one in the pattern matrix. You can also select which row to start on in the next pattern. Note that the specified row xx is in Hex. This effect will not work on the last pattern of the song, because there is no "next pattern". If you want to make a loop, use Bxx instead.</span></p>
+
+<br>
+<span class="rvts77"></span><br><a name="Exx"></a>
+<span class="rvts78">Exx - Extended Commands</span>
+<br>
+<span class="rvts78"></span>
+<br><span class="rvts77">
+- E1xy - Note Slide Up: Use x to define the speed, and y to define the number of semitones to increment. This effect is similar to 3xx - Portamento to Note.
+<br>
+<br>
+- E2xy - Note Slide Down Use x to define the speed, and y to define the number of semitones to decrement. This effect is similar to 3xx - Portamento to Note.
+<br>
+<br>
+- E3xx - Set Vibrato Mode: This command will define vibrato mode, 1 UP ONLY (like guitars), 2 DOWN ONLY, 0 both/normal mode.
+<br>
+<br>
+- E4xx - Set Fine Vibrato Depth: This command will define the fine vibrato depth, default value is F.
+<br>
+<br>
+- E5xx - Set Fine Tune: This command will set the frequency of the current or future sounding notes in a very precise way, it is a fine pitch offset setting, 80 is default.
+<br>
+<br>
+- EBxx - Set Samples Bank: This command will change the current sample bank to xx. A max of 12 sample banks can be used, from 0 to 11.
+<br>
+<br>
+- ECxx - Note Cut: This command will rapidly cut a trigged note. A value greater than the speed of the current row would be ignored.
+<br>
+<br>
+- EDxx - Note Delay: This command will delay a note a short period of time. A value greater than the speed of the current row would be ignored.
+<br>
+<br>
+- EFxx - Set Global Fine Tune: This command will add or subtract to the global pitch of the entire song, a value greater than 80 will add, and a value lower than 80 will subtract (this effect is cumulative).
+<br>
+<br>
+
+<span class="rvts77"></span><br><a name="Fxx"></a>
+<span class="rvts78">Fxx - Set Speed Value 2</span><br><span class="rvts78"></span><br><span class="rvts77">This command will set the playback speed 2 dinamically.</span></p>
+
+</span></p>
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; by Delek. All Rights Reserved.</div>
+		</div>
+	</body>
+	
+</html>
+

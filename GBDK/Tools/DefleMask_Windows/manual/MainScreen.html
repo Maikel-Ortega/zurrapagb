@@ -1,0 +1,203 @@
+<html>
+	
+<head>
+	<title>Main Screen</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+    <meta name="generator" content="HelpNDoc">
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript"><!--
+		var sTopicId = "MainScreen";
+		if (top.frames.length == 0)
+			top.location.href = "Manual.html?" + sTopicId
+		else if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+			top.FrameTOC.SelectTocItem(sTopicId);
+	</script>
+</head>
+
+<body>
+
+	<div id="topic_header">
+			<div id="topic_header_content">
+				<h1>Main Screen</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="DefleMaskMain.html">DefleMask Main</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="DefleMaskMain.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="DefleMaskMain.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="Controls.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p class="rvps3"><img border="0" width="614" height="460" alt hspace="1" vspace="1" src="lib/DefleMask_MainWindow.PNG"><br><span class="rvts22"></span><br><span class="rvts28">·</span>
+
+
+<span class="rvts15">1: Pattern Matrix/Instrument List</span></p>
+<p class="rvps3"><span class="rvts22">
+In the pattern matrix you can arrange the patterns' positions. It is possible to create different orders for every channel, in this way you can create different loops, repetitions and mixes using all the channels at the same time. The pattern matrix is a sequencer, it will help you to control how your song will evolve trough time:</span>
+
+<br><img border="0" alt hspace="1" vspace="1" src="lib/DefleMask_PatternMatrix.PNG"><br>
+<span class="rvts22">The buttons are explained in </span><a class="rvts30" href="Controls.html">Controls</a><span class="rvts22">.</span><br><span class="rvts22"></span><br><span class="rvts22">If the Current System supports instruments and you press the configured key (check out "Controls") or the button over the indexes, the Pattern Matrix will switch into the Instrument List:</span>
+<br>
+
+<img border="0" alt hspace="1" vspace="1" src="lib/DefleMask_InstrumentList.PNG">
+<br>
+
+<span class="rvts22">When you start a new song, there are no instruments at all, you have to click on "New" in order to create a new instrument.</span><br><span class="rvts22">After it is created, you can change the type by clicking on "FM" or "STD" if the current system supports both "FM" and "STD" instruments, STD instruments are controlled by envelopes generators, and FM instruments are controlled by its FM Registers.<br>
+You can enter on the properties of the instruments by clicking on edit button. Inside that subwindow, you can name it and edit its envelopes or FM values, load instruments, save instruments, etc.</span><br><span class="rvts22">If you want a copy of the instrument, you should click "Copy" button, and a copy will be created at the bottom of the list.</span></p>
+
+<p class="rvps3"><span class="rvts22">You can press "Del" to delete the bottom instrument.</span><br><span class="rvts22">If the current system supports PCM Samples, a PCM Samples line will appear. You can press "Edit" button in order to load and assign samples to notes. If the system supports samples, check out the system's section.</span></p>
+<span class="rvts22">If you want a copy of the instrument, you should click "Copy" button, and a copy will be created at the bottom of the list.</span></p>
+<br>
+<span class="rvts15">Save/Load Window:</span><br>
+<img border="0" alt hspace="1" vspace="1" src="lib/DefleMask_Save_Load_Window.PNG">
+<br>
+
+<span class="rvts22">A window like this will popup when you press on a Save or Load button, you can navigate trough subfolders, load files or create more and new folders. Remember that the "Name: " textbox is also used to create a new folder, so you have to select a name and press on "Create Folder" to create it.</span>
+<br><br>
+<span class="rvts15">Instrument Editor Windows:</span><br>
+The instrument editor window in DefleMask is a floating sub window, you can use the side button ">" to switch the position of the window to the right part of the screen, after that you can use the "<" button to move it to the left.<br>
+This is very useful while you are editing a song and you want to check the instrument at the same time.<br>
+In order to close the window, you have to press the "X" button at the top of the screen.<br>
+Because DefleMask is a Multi-System Tracker there are various type of Instrument Editor Windows. Its are explained next.
+<br><br>
+<p class="rvps3"><span class="rvts26">STD Instruments:</span></p>
+<p class="rvps3"><span class="rvts25"></span><br><img border="0" width="614" height="460" alt hspace="1" vspace="1" src="lib/SMS_InstrumentEditor.PNG"><br><span class="rvts25"><br></span></p>
+<p class="rvps3"><span class="rvts25">The STD Instruments are controlled by Macro Generators, you can draw any type of shape using the mouse, you can also copy notes or volume values and paste its inside the Macro, or set a Loop point by clicking in the bottom part of the envelope, you can remove that loop point with a click with the right mouse button. If the current system supports WAVE Channels, you can change the wave selected by the "Selected WAVE" display or by the button in the bottom of the instrument list. Remember that you can use the Arpeggio MACRO/ENVELOPE for the PCM channels too (in order to trigger a sample rapidly).</span></p>
+<br>
+<p class="rvps3"><span class="rvts26">FM Instruments:</span></p>
+<p class="rvps3"><span class="rvts25"></span><br><img border="0" width="614" height="460" alt hspace="1" vspace="1" src="lib/Genesis_InstrumentEditor.PNG"><br><span class="rvts25"><br></span></p>
+<p class="rvps3"><span class="rvts25">The FM Instruments are controlled by FM Registers, you can change its values by using sliders, for more information about the System FM values, check the System's section inside this manual.</span></p>
+<br>
+<p class="rvps3"><span class="rvts26">WAVETABLE Instruments:</span></p>
+<p class="rvps3"><span class="rvts25"></span><br><img border="0" width="614" height="460" alt hspace="1" vspace="1" src="lib/PCE_WAVE_InstrumentEditor.png"><br><span class="rvts25"><br></span></p>
+Some Systems, for example, the Game Boy, have WAVE Channels, its are edited using the mouse and drawing the shape of the desired wave. You can load and save WaveTables any time. In order to change the current Wavetable selected by the "Selected WAVE" display or by the button in the bottom of the instrument list. Also you can copy volume or note values from the patterns and paste that directly in the graph.
+<br><br>
+<p class="rvps3"><span class="rvts26">Samples:</span></p>
+<p class="rvps3"><span class="rvts25"></span><br><img border="0" width="614" height="460" alt hspace="1" vspace="1" src="lib/SamplesEditor.PNG"><br><span class="rvts25"><br></span></p>
+<p class="rvps3"><span class="rvts25">You can load Wav files into DefleMask in order to use the PCM Capabilites of the current system selected, the wav files must have 16bits of depth.</span></p>
+<p class="rvps3"><span class="rvts25">You can use a max of 12 PCM sample instruments, however, in future versions of DefleMask this limit can be expanded.</span></p>
+<p class="rvps3"><span class="rvts25">You can change the Hz of a loaded sample by clicking on the "+" or "-" buttons for each sample, you can also modify it pitch and amplitude.</span></p>
+<p class="rvps3"><span class="rvts25">When you load the first sample, it is assigned to the C note, the second sample loaded will be assigned to the C# note, and so on.</span></p>
+<p class="rvps3"><span class="rvts25">In other words, you can obtain a full octave of samples, from C to B:</span></p>
+<p class="rvps3"><span class="rvts25">C, C#, D, D#, E, F, F#, G, G#, A, A#, B.</span></p>
+<p class="rvps3"><span class="rvts25"><br></span></p>
+<p class="rvps3"><span class="rvts25">You can Preview a sample loaded clicking on "preview" button, or you can use the keyboard.</span></p>
+<p class="rvps3"><span class="rvts25">To replace a loaded sample, simply reload a new sample over the desired one.</span></p>
+<p class="rvps3"><span class="rvts25">To delete a sample, click on the "X". Only the lastest loaded sample can be deleted!, so, if you want to erease the first sample, you will need to erase the others. The samples are stored in a stack.</span></p>
+<p class="rvps3"><span class="rvts25"><br></span></p>
+<br>
+
+<p class="rvps3"><span class="rvts22"><br></span></p>
+
+<p class="rvps3"><span class="rvts22"></span><br><span class="rvts28"></span><span class="rvts15">2: Options</span><br>
+
+<span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts24"></span>
+<span class="rvts22">Repeat: If it is checked, the song will start again when it reach the end.</span><br><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts24"></span>
+<span class="rvts22">Follow: If it is checked, the camera will follow the playing row.</span><br><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span>
+<span class="rvts24"></span><span class="rvts22">Record: If it is checked, you can modify the patterns, you can check/uncheck it using the keyboard too (check out <a class="rvts30" href="Controls.html">keyboard shortcuts</a> for more information).</span>
+
+<p class="rvps3">
+
+<span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts24"></span>
+<span class="rvts22">Step: The count of rows that the tracker will skip after a new data.</span><br>
+
+<span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts24"></span>
+<span class="rvts22">Shrink/Expand: This are global Shrink and Expand commands, they will double the size of the patterns and shrink/expand the information in the current project. You can do this locally using <a class="rvts30" href="Controls.html">keyboard shortcuts</a>.</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span>
+
+<br>
+<span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts24"></span>
+<span class="rvts22">NTSC/PAL/Custom: You can choose the global speed of the song, NTSC is 60hz and PAL is 50hz. You can also check "Custom" in order to set a custom clock speed value.</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span>
+</p>
+
+<span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts24"></span>
+<span class="rvts22">Track Mode/Live Mode: By pressing this button or using the Keyboard Shortcut Ctrl+E, you will enter to the Live Mode. Please read <a href="LiveMode.html">"The Live Mode"</a> category inside this manual for more details.<br>
+By pressing it again you will get back to the normal Track Mode.</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span>
+
+</p>
+<br>
+
+<span class="rvts15">3: Main Menu</span></p>
+<p class="rvps3"><span class="rvts22">This is the main menu of DefleMask tracker, and clicking it you can:</span><br>
+
+<span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts24">·</span>
+
+<span class="rvts22">Options: Under Options menu you can:</span>
+<br>
+<span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span>
+
+<span class="rvts24">·</span><span class="rvts22">System: Change the current system. Check the Supported Systems list at DefleMask Main.</span><br>
+
+<span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts24">·</span>
+
+<span class="rvts22">About: Check some information about me and the tracker itself.</span>
+<br>
+<span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts24">·</span>
+<span class="rvts22">E. Wav: Export the current song, in real time, to a WAV file.</span><br><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts24">·</span>
+<span class="rvts22">Keys: To customize your keyboard layout.</span><br>
+<span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts24">·</span>
+<span class="rvts22">MIDI: A list of available MIDI IN devices will be shown, select a device as the default MIDI input controller. This setting will be saved. DefleMask will record multiple notes at the same time, this means that if you play a chord, various channels could recieve the input and the notes will be stored in the pattern sucessfully.</span>
+</p>
+
+<span class="rvts22"><br>Also you will find some more options under Options menu:
+<br>Buffer: To change the Audio Buffer Size to improve the tracker performance.
+<br>Play On Load: To avoid or to force the play of the loaded song.
+<br>Waveform Viewer: To enable or disable the render of the output Waveform.
+<br>Horizontal Effects Entry: To enable or disable the cursor movement to the right rather than down while entering effects.</span>
+<br><br>
+<p class="rvps3"><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts24">·</span><span class="rvts22">Play sng: Plays the song from current pattern selected.</span><br><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts24">·</span><span class="rvts22">Disk Op.: Under Disk Op. menu you can:</span><br><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts24">·</span><span class="rvts22">L. DMF: Loads a DMF (DefleMask Format) into the tracker.</span></p>
+<p class="rvps3"><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts24">·</span><span class="rvts22">L. [SYSTEM FORMAT]: Loads the compiled file, if the load is possible you can listen to the file.</span></p>
+<p class="rvps3"><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts24">·</span><span class="rvts22">S. DMF: Saves a DMF (DefleMask Format).</span></p>
+<p class="rvps3"><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts24">·</span><span class="rvts22">S. [SYSTEM FORMAT]: Saves a compiled file, ready to be listened on specific system architecture.</span></p>
+<p class="rvps3"><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts24">·</span><span class="rvts22">L. Skin: Loads a new Skin into DefleMask.</span></p>
+<p class="rvps3"><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts24">·</span><span class="rvts22">Cancel: Return to the previous menu.</span></p>
+<p class="rvps3"><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts24">·</span><span class="rvts22">Play ptn: Plays only current pattern selected.</span><br><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts24">·</span><span class="rvts22">New: Make a song from scratch, it will change his text to "Sure?", click again to confirm.</span></p>
+<p class="rvps3"><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts24">·</span><span class="rvts22">Stop: Stop the song if it is playing.</span><br><span class="rvts22"></span>
+
+<br>
+
+<p class="rvps3"><span class="rvts22"></span><br><span class="rvts28">·</span><span class="rvts15">4: More Options</span><br>
+<span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts24">·</span><span class="rvts22">Arpeggio Tick: The speed of the arpeggio command.</span><br><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts24">·</span>
+<span class="rvts22">Rows: Total number of rows per pattern, "++" and "--" buttons will increase an decrease by 10.</span><br><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts24">·</span><span class="rvts22">Octave: Input octave selector, can be changed by a </span><a class="rvts30" href="Controls.html">keyboard shortcut</a><span class="rvts22">.</span><br><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span>
+<span class="rvts24">·</span><span class="rvts22">Base Time: The base time value multiplies the tick time value, to obtain longer tempos.</span></p>
+<p class="rvps3">
+<span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts24">·</span>
+<span class="rvts22">Speed: The total time of a even row and for a odd row.</span><br>
+<span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts24">·</span>
+<span class="rvts22">Highlights: Rows in DefleMask are highlighted between two values, you can change the highlighted row numbers </span><span class="rvts22"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="rvts22">using this selector.</span>
+</p>
+<p class="rvps3"><span class="rvts22"></span><br><span class="rvts28">·</span>
+
+<span class="rvts28"></span><span class="rvts15">5: Song Information</span><br><span class="rvts22">In this block you can see the song information, like, Song Title, Author, Current selected system, engine speed of the song (NTSC, PAL, custom clock speed).</span></p>
+<br>
+
+<span class="rvts15">6: Patterns</span><br><span class="rvts22">This is the main part of any tracker, in it you can enter, among other things, your notes, effects, volumes and instrument changes.</span><br><span class="rvts22">The number of patterns will depend of the system selected, but a row looks like this:</span><br><img border="0" alt hspace="1" vspace="1" src="lib/DefleMask_Row.PNG"><br><span class="rvts29">-</span><span class="rvts23">Row</span><span class="rvts22">: The number of the current row, the number of total rows can be changed using Total Rows changer on </span><span class="rvts24">·</span><span class="rvts23">5</span><span class="rvts22">.</span><br><span class="rvts29">-</span><span class="rvts23">Note</span><span class="rvts22">: In this quad you can put the actual notes that the tracker will play, check Controls chapter for a note-key relation.</span><br><span class="rvts29">-</span><span class="rvts23">Vol</span><span class="rvts22">: Here you will be able to define a new volume, the max value is FF (Hexadecimal)</span><br><span class="rvts29">-</span><span class="rvts23">Ins</span><span class="rvts22">: This value will relate the Instrument List with the Patterns. Remember that some systems/soundchips are not capable to switch instruments, or are not capable of have instruments, so this value will be ignored or only processed one time.</span><br><span class="rvts29">-</span>
+
+<span class="rvts23">Effect</span><span class="rvts22">: The effect that you want to hear needs to be introduced here. In order to know the possible effects check the Standard Effects chapter and, remember that the current system that you are using maybe is capable to make other effects or maybe the behavior of one of the standard is processed in a different way, so check the chapter of the system that you are using after check the Standard Effects.</span><br><span class="rvts29">-</span>
+<span class="rvts23">Value</span><span class="rvts22">: The effect that is selected will be executed using this factor, remember that there are some effects that does not require a value.</span><br><span class="rvts22"><br>
+NOTE: You can add up to 4 effects columns pressing the "+" button in the upper part of each channel.</span></p>
+<p class="rvps3"><span class="rvts22"></span><br><span class="rvts28">·</span>
+
+<span class="rvts15">7: Indexes and Instrument List/Pattern Matrix Button</span><br><span class="rvts22">In this place DefleMask will show you the row number where you are working, this tab is over the patterns and semi-transparent, so you can move the view horizontally and it always be visible.<br>
+Over the indexes, there is the switch button between the Instrument List and the Pattern Matrix, you can do this also with a key (check out <a class="rvts30" href="Controls.html">keyboard shortcut</a> for more information).</span>
+
+</div>
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; by Delek. All Rights Reserved.</div>
+		</div>
+	</body>
+	
+</html>
+

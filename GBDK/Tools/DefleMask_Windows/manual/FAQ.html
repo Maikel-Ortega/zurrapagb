@@ -1,0 +1,87 @@
+<html>
+	
+<head>
+	<title>FAQ</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+    <meta name="generator" content="HelpNDoc">
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript"><!--
+		var sTopicId = "FAQ";
+		if (top.frames.length == 0)
+			top.location.href = "Manual.html?" + sTopicId
+		else if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+			top.FrameTOC.SelectTocItem(sTopicId);
+	</script>
+</head>
+
+<body>
+
+	<div id="topic_header">
+			<div id="topic_header_content">
+				<h1>FAQ</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="DefleMaskMain.html">DefleMask Main</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="DefleMaskMain.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="Configini.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="DeleksLinks.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p class="rvps3"><span class="rvts83">FAQ:</span></p>
+<p class="rvps3"><span class="rvts13"><br></span></p>
+<p class="rvps3"><span class="rvts25">Q: MIDI Input is already supported by DefleMask?</span></p>
+<p class="rvps3"><span class="rvts25">A: Yes!, under Options you will find the MIDI button. It will list all available MIDI devices.</span><br><span class="rvts25"><br></span></p>
+<p class="rvps3"><span class="rvts25">Q: How can I associate the files extension with DefleMask?</span></p>
+<p class="rvps3"><span class="rvts25">A: DefleMask automatically associate files extension under Windows, in Windows 7 you should start it as Administrator to let DefleMask to write into the registry. In Linux you should done the association manually.</span><br><span class="rvts25"><br></span></p>
+<p class="rvps3"><span class="rvts25">Q: I saved a track in VGM format, but there are some problems with the playback of the file, why?</span></p>
+<p class="rvps3"><span class="rvts25">A: Remember that DefleMask can export in various versions of the VGM Format, some players maybe do not support the desired format. The latest in_vgm Winamp Plugin is included in extras folder, with it every track should sound fine.</span><br><span class="rvts25"><br></span></p>
+<p class="rvps3"><span class="rvts25">Q: I made a Skin for DefleMask and some Textures are not loaded, what I'm doing wrong?.</span></p>
+<p class="rvps3"><span class="rvts25">A: Remember that you need to copy all textures from the default skin, if some texture is missing, DefleMask will simply load the default skin. If the problem persist, make a thread on the forum and explain your problem.</span><br><span class="rvts25"><br></span></p>
+<p class="rvps3"><span class="rvts25">Q: How can I speed up the performance of DefleMask?</span></p>
+<p class="rvps3"><span class="rvts25">A: You could try to increase the Buffer's size, under options menu. Also you can try to decrease the max_fps value inside the config.ini file.</span><br><span class="rvts25"><br></span></p>
+
+<p class="rvps3"><span class="rvts25">Q: My computer crashed, my work is lost?</span></p>
+<p class="rvps3"><span class="rvts25">A: DefleMask saves automatically a backup module in the folder where the executable is located. You should search for "backup.dmf", it is the latest module played.</span><br><span class="rvts25"><br></span></p>
+
+<p class="rvps3"><span class="rvts25">Q: I done a skin, but it don't load, how can I solve this?</span></p>
+<p class="rvps3"><span class="rvts25">A: Maybe you miss a texture file. Check that your skin have all the textures that the default skin have. Maybe there is a new texture added in a update and your skin needs it.</span><br><span class="rvts25"><br></span></p>
+
+<p class="rvps3"><span class="rvts25">Q: The volume of the channels are quieter after a Macro, why?</span></p>
+<p class="rvps3"><span class="rvts25">A: The latest value of volume is used as a reference for the next volume macro, so if you want to reset the volume to the standard you have to put in the volume column the max volume of the current system (F, for example).</span><br><span class="rvts25"><br></span></p>
+
+
+<p class="rvps3"><span class="rvts25">Q: I can not run DefleMask, I got a "Impossible to create the Window. CODE: 0xF4E7372F" in the ERROR.log file.</span></p>
+<p class="rvps3"><span class="rvts25">A: This should be a problem in the OpenGL drivers or video drivers, try to search for an OpenGL installation package and to update the video drivers and the problem should be fixed.</span><br><span class="rvts25"><br></span></p>
+
+<p class="rvps3"><span class="rvts25">Q: On my Linux DefleMask won't start, why?</span></p>
+<p class="rvps3"><span class="rvts25">A: This is usually due to a missing library, remember to get OpenGL (sudo apt-get install freeglut3), if you are on a 64Bits distro you have to Download 32Bits libraries (sudo apt-get install ia32-libs) and maybe you will need also SDL libraries and lib32asound2-plugins.</span><br><span class="rvts25"><br></span></p>
+
+
+<p class="rvps3"><span class="rvts25">Q: On my Mac OS X I get "Library not loaded: /usr/local/lib/libSDL-1.2.0.dylib" and DefleMask won't start, why?</span></p>
+<p class="rvps3"><span class="rvts25">A: You have to move libSDL-1.2.0.dylib file included with DefleMask to usr/local/lib to correctly load the Library.</span><br><span class="rvts25"><br></span></p>
+
+<p class="rvps3"><span class="rvts25">Q: Can I make other questions to you?.</span></p>
+<p class="rvps3"><span class="rvts25">A: Of course, you should register on </span><a class="rvts84" href="DeleksLinks.html">the forum</a><span class="rvts25"> and ask anything you need to know.</span></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; by Delek. All Rights Reserved.</div>
+		</div>
+	</body>
+	
+</html>
+
