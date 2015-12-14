@@ -1,0 +1,259 @@
+INCLUDE "gbhw.inc"          ; importamos el archivo de definiciones
+ 
+; definimos unas constantes para trabajar con nuestro sprite
+_SPR0_Y     EQU     _OAMRAM 
+_SPR0_X     EQU     _OAMRAM+1
+_SPR0_NUM   EQU     _OAMRAM+2
+_SPR0_ATT   EQU     _OAMRAM+3
+
+;Aqui guardamos el estado del pad
+_PAD		EQU		_RAM ;Direccion de la RAM
+
+SECTION "start", HOME[$0100]
+	nop
+	jp		inicio
+	
+	ROM_HEADER  ROM_NOMBC, ROM_SIZE_32KBYTE, RAM_SIZE_0KBYTE
+	
+inicio:
+	nop
+	di
+	ld		sp, $ffff
+	
+inicializacion:
+	ld		a, %11100100
+	
+	ld		[rBGP], a
+	ld		[rOBP0], a
+	
+	ld		a, %00011011
+	ld		[rOBP1], a
+	
+	ld		a, 0
+	ld		[rSCX], a
+	ld		[rSCY], a
+	
+	call	apaga_LCD
+	
+	ld		hl, Tiles
+	ld		de, _VRAM
+	ld		b,32
+	
+.bucle_carga:
+	ld		a,[hl]
+	ld		[de],a
+	dec		b
+	jr		z, .fin_bucle_carga
+	inc		hl
+	inc		de
+	jr		.bucle_carga
+.fin_bucle_carga
+
+	ld		hl, _SCRN0
+	ld		de, 32*32
+.bucle_limpieza_fondo:
+	ld		a,0
+	ld		[hl],a
+	dec		de
+	ld		a, d
+	or		e
+	jp		z, .fin_bucle_limpieza_fondo
+	inc		hl
+	jp		.bucle_limpieza_fondo
+.fin_bucle_limpieza_fondo
+
+;;Ahora limpiamos la memoria de sprites
+	
+	ld		hl, _OAMRAM
+	ld		de, 40*4
+.bucle_limpieza_sprites:
+	ld		a, 0
+	ld		[hl], a
+	dec		de
+	ld		a, d
+	or		e
+	jp		z, .fin_bucle_limpieza_sprites
+	inc		hl
+	jp		.bucle_limpieza_sprites
+.fin_bucle_limpieza_sprites
+
+	ld		a, 74
+	ld		[_SPR0_Y], a
+	ld		a, 90
+	ld		[_SPR0_X], a
+	ld		a, 1
+	ld		[_SPR0_NUM], a
+	ld		a, 0
+	ld		[_SPR0_ATT], a
+	
+    ld      a, LCDCF_ON|LCDCF_BG8000|LCDCF_BG9800|LCDCF_BGON|LCDCF_OBJ8|LCDCF_OBJON
+    ld      [rLCDC], a
+ 	
+;;BUCLE PRINCIPAL
+
+movimiento:
+	call	lee_pad
+.wait:
+	ld 		a, [rLY]
+	cp 		145
+	jr 		nz, .wait
+
+	ld 		a, [_PAD]
+	and 	%00010000
+	call	nz, mueve_derecha
+	
+	ld 		a, [_PAD]
+	and 	%00100000
+	call	nz, mueve_izquierda
+	
+	ld 		a, [_PAD]
+	and 	%01000000
+	call	nz, mueve_arriba
+	
+	ld 		a, [_PAD]
+	and 	%10000000
+	call	nz, mueve_abajo
+	
+	ld 		a, [_PAD]
+	and 	%00000001
+	call	nz, cambia_paleta
+	
+	call retardo
+	
+	jr movimiento
+	
+	
+mueve_derecha:
+	ld		a, [_SPR0_X]
+	cp 		160
+	ret		z
+	
+	inc		a
+	ld		[_SPR0_X],a
+	ret
+	
+mueve_izquierda:
+	ld		a, [_SPR0_X]
+	cp 		8
+	ret		z
+	
+	dec		a
+	ld		[_SPR0_X],a
+	ret
+	
+mueve_arriba:
+	ld		a, [_SPR0_Y]
+	cp 		16
+	ret		z
+	
+	dec		a
+	ld		[_SPR0_Y],a
+	ret
+
+mueve_abajo:
+	ld		a, [_SPR0_Y]
+	cp 		152
+	ret		z
+	
+	inc		a
+	ld		[_SPR0_Y],a
+	ret
+cambia_paleta:
+	ld		a, [_SPR0_ATT]
+	and		%00010000
+	jr		z, .paleta0
+	
+	ld		a, [_SPR0_ATT]
+	res		4, a
+	ld		[_SPR0_ATT], a
+
+	call 	retardo
+	ret
+.paleta0:
+	ld		a, [_SPR0_ATT]
+	set		4, a
+	ld		[_SPR0_ATT], a
+	
+	call	retardo
+	ret
+	
+; Rutina de lectura del pad
+lee_pad:
+    ; vamos a leer la cruzeta:
+    ld      a, %00100000    ; bit 4 a 0, bit 5 a 1 (cruzeta activada, botones no)
+    ld      [rP1], a
+ 
+    ; ahora leemos el estado de la cruzeta, para evitar el bouncing
+    ; hacemos varias lecturas
+    ld      a, [rP1]
+    ld      a, [rP1]
+    ld      a, [rP1]
+    ld      a, [rP1]
+ 
+    and     $0F             ; solo nos importan los 4 bits de abajo.
+    swap    a               ; intercambiamos parte baja y alta.
+    ld      b, a            ; guardamos el estado de la cruzeta en b
+ 
+    ; vamos a por los botones
+    ld      a, %00010000    ; bit 4 a 1, bit 5 a 0 (botones activados, cruzeta no)
+    ld      [rP1], a
+ 
+    ; leemos varias veces para evitar el bouncing
+    ld      a, [rP1]
+    ld      a, [rP1]
+    ld      a, [rP1]
+    ld      a, [rP1]
+ 
+    ; tenemos en A, el estado de los botones
+    and     $0F             ; solo nos importan los 4 bits de abajo.
+    or      b               ; hacemos un or con b, para "meter" en la parte
+                            ; superior de A, el estado de la cruzeta.
+ 
+    ; ahora tenemos en A, el estado de todo, hacemos el complemento y
+    ; lo guardamos en la variable
+    cpl
+    ld      [_PAD], a
+    ; volvemos
+    ret
+ 
+; Rutina de apagado del LCD
+apaga_LCD:
+    ld      a,[rLCDC]
+    rlca                    ; Pone el bit alto de LCDC en el flag de acarreo
+    ret     nc              ; La pantalla ya está apagada, volver.
+ 
+    ; esperamos al VBlank, ya que no podemos apagar la pantalla
+    ; en otro momento
+ 
+.espera_VBlank
+    ld      a, [rLY]
+    cp      145
+    jr      nz, .espera_VBlank
+ 
+    ; estamos en VBlank, apagamos el LCD
+    ld      a,[rLCDC]       ; en A, el contenido del LCDC
+    res     7,a             ; ponemos a cero el bit 7 (activado del LCD)
+    ld      [rLCDC],a       ; escribimos en el registro LCDC el contenido de A
+ 
+    ret                     ; volvemos
+ 
+; rutina de retardo
+retardo:
+    ld      de, 2000        ; numero de veces a ejecutar el bucle
+.delay:
+    dec     de              ; decrementamos
+    ld      a, d            ; vemos si es cero
+    or      e
+    jr      z, .fin_delay
+    nop
+    jr      .delay
+.fin_delay:
+    ret
+ 
+; Datos de nuestros tiles
+Tiles:
+    DB  $AA, $00, $44, $00, $AA, $00, $11, $00
+    DB  $AA, $00, $44, $00, $AA, $00, $11, $00
+    DB  $3E, $3E, $41, $7F, $41, $6B, $41, $7F
+    DB  $41, $63, $41, $7F, $3E, $3E, $00, $00
+EndTiles:

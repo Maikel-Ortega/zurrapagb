@@ -28,17 +28,18 @@ inicializacion:
                             ; más claro, 11 10 01 00
     ld      [rBGP], a       ; escribimos esto en el registro de paleta
  
-    ld      a, 0            ; escribimos 0 en los registros de scroll X e Y
+    ld      a, 16            ; escribimos 0 en los registros de scroll X e Y
     ld      [rSCX], a       ; con lo que posicionamos la pantalla visible
+	ld      a, 0            ; escribimos 0 en los registros de scroll X e Y
     ld      [rSCY], a       ; al inicio (arriba a la izq) del fondo.
  
     call    apaga_LCD       ; llamamos a la rutina que apaga el LCD
  
     ; cargamos el tile en la memoria de tiles
  
-    ld      hl, TileLetra    ; cargamos en HL la dirección de nuestro tile
+    ld      hl, Tiles    ; cargamos en HL la dirección de nuestro tile
     ld      de, _VRAM       ; en DE dirección de la memoria de video
-    ld      b, 16           ; b = 16, numero de bytes a copiar
+    ld      b, 32           ; b = 32, numero de bytes a copiar
  
 .bucle_carga:
     ld      a,[hl]          ; cargamos en A el dato apuntado por HL
@@ -49,11 +50,25 @@ inicializacion:
     inc     de              ; incrementamos la dirección a escribir en
     jr      .bucle_carga    ; seguimos
 .fin_bucle_carga:
- 
+
     ; escribimos nuestro tile, en el mapa de tiles
  
     ld      hl, _SCRN0      ; en HL la dirección del mapa de fondo
-    ld      [hl], $00       ; $00 = el tile 0, nuestro tile.
+    ld		de, 32*32		; numero de tiles del fondo
+	
+.bucle_limpieza:
+	ld		a, 0			; vamos a usar el tile0, que esta vacio
+	ld		[hl], a			; cargamos el dato de a (tile0) en el mapa de fondo
+	dec 	de				; decrementamos de, que vale 32*32
+	ld		a,d				; como "de" no genera flag z, tenemos que mirar ambos
+	or		e				; y hacemos un "or"
+	jp		z, .fin_bucle_limpieza
+	inc		hl				;incrementamos hl para ir recorriendo el mapa de fondo
+	jp		.bucle_limpieza
+.fin_bucle_limpieza:
+ 
+	ld		hl, _SCRN0+21
+	ld		[hl], $01
  
     ; configuramos y activamos el display
     ld      a, LCDCF_ON|LCDCF_BG8000|LCDCF_BG9800|LCDCF_BGON|LCDCF_OBJ8|LCDCF_OBJOFF
@@ -87,10 +102,12 @@ apaga_LCD:
     ret                     ; volvemos
  
 ; Datos de nuestro tile
-TileCara:
+Tiles
+	DB  $00, $00, $00, $00, $00, $00, $00, $00
+	DB  $00, $00, $00, $00, $00, $00, $00, $00
     DB  $7C, $7C, $82, $FE, $82, $D6, $82, $D6
     DB  $82, $FE, $82, $BA, $82, $C6, $7C, $7C
-EndTileCara:
+EndTiles:
 
 TileLetra:
 	DB $7C, $7C, $C6, $00, $00, $C6, $FE, $00
